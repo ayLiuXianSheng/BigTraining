@@ -10,7 +10,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class MainActivity extends BaseActivity {
-
+    //分支
     @Override
     protected int getLayoutId() {
         return R.layout.activity_main;
