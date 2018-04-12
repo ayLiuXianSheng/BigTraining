@@ -1,5 +1,6 @@
 package com.example.lenovo.jd.view.fragment;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -7,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.lenovo.jd.R;
+import com.example.lenovo.jd.view.activity.LoginActivity;
+import com.example.lenovo.jd.view.activity.RegisterActivity;
+import com.example.lenovo.jd.view.activity.UserInfoActivity;
 import com.example.lenovo.jd.view.base.BaseFragment;
 import com.example.lenovo.jd.view.base.BasePresenter;
 
@@ -38,6 +42,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
     private ImageView mImgSq;
     private ImageView mImgKffw;
     private LinearLayout mTextJdcs;
+    private Intent intent;
 
     @Override
     protected int getLayoutId() {
@@ -96,6 +101,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
         mImgKffw.setOnClickListener(this);
         mTextJdcs = (LinearLayout) view.findViewById(R.id.text_jdcs);
         mTextJdcs.setOnClickListener(this);
+        intent = new Intent(getActivity(),LoginActivity.class);
     }
 
     @Override
@@ -118,11 +124,13 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
             case R.id.user_head:
                 //头像
-                Toast.makeText(getContext(),"头像",Toast.LENGTH_LONG).show();
+                /*Toast.makeText(getContext(),"头像",Toast.LENGTH_LONG).show();*/
+                startActivity(intent);
                 break;
             case R.id.user_name:
                 //用户名
-                Toast.makeText(getContext(),"用户名",Toast.LENGTH_LONG).show();
+                /*Toast.makeText(getContext(),"用户名",Toast.LENGTH_LONG).show();*/
+                startActivity(intent);
                 break;
             case R.id.img_dfk:
                 //待付款

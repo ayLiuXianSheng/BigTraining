@@ -1,6 +1,7 @@
 package com.example.lenovo.jd.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,6 +10,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.lenovo.jd.R;
+import com.example.lenovo.jd.view.activity.HomePageParticularsActivity;
+import com.example.lenovo.jd.view.activity.ListActivity;
 import com.example.lenovo.jd.view.bean.ClassifyRightSuperClass;
 
 import java.util.List;

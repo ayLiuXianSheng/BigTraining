@@ -1,6 +1,7 @@
 package com.example.lenovo.jd.view.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.example.lenovo.jd.R;
+import com.example.lenovo.jd.view.activity.ListActivity;
 import com.example.lenovo.jd.view.bean.ClassifyLeftSuperClass;
 
 import java.util.List;
@@ -34,7 +36,15 @@ public class MiddleAdapter extends RecyclerView.Adapter<MiddleAdapter.ViewHolder
     @Override
     public MiddleAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.middle_layout, parent, false);
-        ViewHolder holder = new ViewHolder(view);
+        final ViewHolder holder = new ViewHolder(view);
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context,ListActivity.class);
+                intent.putExtra("pscid",list.get(holder.getLayoutPosition()).getCid() + "");
+                context.startActivity(intent);
+            }
+        });
         return holder;
     }
 
